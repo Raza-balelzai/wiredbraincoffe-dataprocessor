@@ -26,7 +26,7 @@ public class CsvLineParser
         }
         if (!DateTime.TryParse(lineItems[1],out DateTime dateTime))
         {
-            throw new Exception($"Invalid DateTime in CSV Line: {csvLine}");
+            throw new Exception($"Invalid DateTime: {csvLine}");
         }
         return new MachineDataItem(lineItems[0],dateTime);
     }
